@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'HVDComicSerifProRegular';
+    src: url('HVD_Comic_Serif_Pro-webfont.eot');
+    src: url('HVD_Comic_Serif_Pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HVD_Comic_Serif_Pro-webfont.woff') format('woff'),
+         url('HVD_Comic_Serif_Pro-webfont.ttf') format('truetype'),
+         url('HVD_Comic_Serif_Pro-webfont.svg#HVDComicSerifProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html { font-family: sans-serif; }
+
+h1.fontface {
+  margin-top: 1em;
+  font: 70px/70px 'HVDComicSerifProRegular', Arial, sans-serif;
+  letter-spacing: 0;
+  text-shadow: -1px -1px 1px rgba(255,255,255, 1), 1px 1px 1px rgba(0,0,0, 1), 0 0 10px rgba(0,0,0, 0.75);
+  color: orange;
+  text-align: center;
+}
+
+p {font: 16px/24px sans-serif;}
+
+body { background: url(images/boots.jpg) #492e23; background-size: 100%;}
+#container {
+  margin-top: 3em;
+  background-color: rgba(250,246,247, .75);
+  border: 4px solid #492e23;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; 
+  width: 350px;
+  padding: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button { 
+  text-shadow: 1px 1px 0 rgba(250, 246, 247, 1);
+  background-color: orange;
+  font-size: 200%;
+  font-family: sans-serif;
+  padding: 0.5em 1em;
+  border-top: 2px solid #faf6f7;
+  border-left: 2px solid #faf6f7;
+  border-bottom: 2px solid #492e23;
+  border-right: 2px solid #492e23;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-weight: bold;
+  color: #1d1113;
+}
