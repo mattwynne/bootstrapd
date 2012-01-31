@@ -1,0 +1,46 @@
+html { font-family: sans-serif; }
+
+h1{
+  margin-top: 1em;
+  font: 72px/72px 'Signika', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-shadow: 1px 1px 1px rgba(255,255,255, 1), -1px -1px 1px rgba(50,50,50, 1), 0 0 10px rgba(0,0,0, 0.75);
+  color: #fefde6;
+  text-align: center;
+}
+
+p {font: 18px/24px 'Signkia', sans-serif; font-weight: 300; margin-top: 0;}
+
+body { background: #000 url(images/sunrise.jpg);
+       background-size: 100% auto;
+       background-repeat: no-repeat}
+
+#container {
+  margin-top: 3em;
+  background-color: rgba(254,253,230, .75);
+  border: 1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; 
+  width: 350px;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button { 
+  text-shadow:-1px -1px 1px rgba(50,50,50, 1);
+  margin: 0;
+  background-color: #ff4a00;
+  font: 36px/36px 'Signika', sans-serif;
+  padding: 0.5em 1em;
+  border-top: 1px solid #fefde6;
+  border-left: 1px solid #fefde6;
+  border-bottom: 1px solid #492e23;
+  border-right: 1px solid #492e23;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-weight: bold;
+  color: #fefde6;
+}
