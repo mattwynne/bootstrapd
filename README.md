@@ -2,7 +2,7 @@ This is the source for http://bootstrapd.com
 
 If you're coming to the conference, you are welcome to edit the site yourself!
 
-# How to edit the site
+### How to edit the site
 
 There are three ways you can make changes to this website:
 
