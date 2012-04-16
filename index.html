@@ -4,92 +4,222 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>bootstrapd - a community gathering for software craftspeople</title>
+    <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+    <script src="javascripts/modernizr.custom.13950.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
-
       body {
-        background-image: url(./background.jpg);
-        background-size: 1440px;
-        background-repeat: no-repeat;
-        background-position: top;
-        font-family: Palatino,Georgia,"Times New Roman",serif;
-        font-size: 16pt;
+        background: #606465 url(./background.jpg) no-repeat top;
+        background-size: 100%;
+        font-family: sans-serif;
+        font-weight: 100;
       }
 
-      aside {
-        font-size: 0.8em;
+      aside { font-size: 0.8em; }
+      #social {float: right}
+
+      h1, h2, h3, h4, h5, h6 {font-family: 'Lemon', cursive; color: #3f4953; text-shadow: 1px 1px 0 rgba(255,255,255, 0.6);}
+      p {font-family: sans-serif; font-weight: 100;}
+      dt {float: left; margin-right: 10px; font-family: 'Lemon', cursive;}
+
+      .wrapper { max-width: 850px; margin: 10px auto 0; }
+      .half { width: 48%; margin-right: 4%; float: left;}
+      .last {margin-right: 0;}
+
+      .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+        }
+      * html .clearfix             { zoom: 1; } /* IE6 */
+      *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+      #header-wrapper { padding: 10px 0; color: white; }
+      #header-wrapper a, #header-wrapper a:visited, #header-wrapper a:hover {color: white; !important}
+      #logo { 
+        margin-right: 5%;
+        font-size: 3em;
+        font-family: 'Lemon', cursive;
+        width: 35%; sans-serif;
+        text-shadow: 1px 1px 0 rgba(0,0,0, 0.6), -1px -1px 0 rgba(255,255,255, 0.6);
       }
 
-      header,section {
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
-        max-width: 800px;
-      }
+      #dateline { text-align: right; float: right; margin-top: 5px;}
+      #dateline time {font-weight: 700;}
+      #strapline { clear: both; margin-top: 2%; text-shadow: 1px 1px 0 rgba(0,0,0, 0.6); font-weight: 400; font-size: 1.35em;}
 
-      h2,h3,h4 {
-        margin-top: 50px;
-      }
-
-      .wrapper {
-        max-width: 850px;
+      #body-wrapper {
         background-color: rgba(255,255,255,0.5);
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 20px;
-        -moz-border-radius: 20px;
-        -webkit-border-radius: 20px;
+        padding: 2%;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius:10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #adbece;
       }
 
+      #tickets {margin: 10px 0;}
+      #ticket-button {float: left; margin-right: 2%;}
+      a#price, a#price:visited {
+        float:left;
+        display: table;
+        padding: 10px 20px;
+        border: 1px solid #d15f00;
+        border-left: none;
+        -o-border-top-left-radius: 10px;
+        -o-border-bottom-left-radius: 10px;
+        -ms-border-top-left-radius: 10px;
+        -ms-border-bottom-left-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-top-left: 10px;
+        -moz-border-radius-bottom-left: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background: #d15f00;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        text-shadow: -1px -1px 0 rgba(0,0,0, 0.6);
+        font-size: 1.5em;
+
+      }
+
+      a#price:hover { background: #d15f00;}
+
+      a#cta , a#cta:visited {
+        white-space: nowrap;
+        font-weight: 700;
+        display: table;
+        padding: 15px 20px;
+        border: 1px solid #d15f00;
+        -o-border-top-right-radius: 10px;
+        -o-border-bottom-right-radius: 10px;
+        -ms-border-top-right-radius: 10px;
+        -ms-border-bottom-right-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-top-right: 10px;
+        -moz-border-radius-bottom-right: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #ffa84c; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTg0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdiMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* IE10+ */
+        background: linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-8 */
+        text-decoration: none;
+        color: white;
+        text-shadow: -1px -1px 0 rgba(0,0,0, 0.6);
+        }
+
+       a#cta:hover { background: #ff7b0d;}
+
+    @media screen and (max-width: 600px) {
+      #logo, #strapline, #dateline {text-align: center; width: 100%;}
+      .wrapper { width: 85%;} 
+      .half { float: none; width: 100%; margin-right: 0; }
+      #dateline { width: 100%; clear: both; margin-left: 0;}
+      a#cta , a#cta:visited {margin-right: 0; padding: 15px 15px;}
+      a#price , a#price:visited {margin-right: 0; padding: 10px 15px;}
+      #forkit { display: none;}
+      #ticket-button {float: none; margin-right: 0;}
+      #social {clear: both; float: none;}
+
+    }
+
+    @media screen and (min-width: 601px){
+      .wrapper { width: 90% }
+      #forkit { display: none;}
+    }
     </style>
   </head>
 
   <body>
-
-    <div class="wrapper">
+    <div id='header-wrapper' class='wrapper'>
       <header>
-      <div class="container">
-        <h1>bootstrapd</h1>
-      </div>
+        <div id='dateline'>
+          <time datetime="2012-06-27">Wednesday June 27th</time> <br /> <a href="http://lanyrd.com/venues/edinburgh/vrrz/">Abden House, Edinburgh, UK</a>
+    </div>
+        <div id='logo'>bootstrapd</div>
+        <div id='strapline'>
+          A community gathering for software craftspeople who build and sell their own products.
+        </div>
       </header>
+    </div>
+    <div id="body-wrapper" class="wrapper clearfix">
+      <section id="main-content">
+      <p>We don't want VC funding. We don't want a big payoff exit. We want to create a sustainable living and enjoy our craft.</p>
+      <p>Come along, meet like minded people, share ideas about how to make it happen.</p>
 
-      <div class="container">
-        <section id="main-content">
-        <h2>
-          a community gathering for software craftspeople who build and sell their own products.
-        </h2>
-
-        <p>
-        We don't want VC funding, we aren't looking for a big exit; we want to create a sustainable living and enjoy our craft.
-        </p>
-
-        <p>Wednesday June 27th at <a href="http://lanyrd.com/venues/edinburgh/vrrz/">Abden House, Edinburgh, UK</a></p>
-
-        <p>Tickets cost £75.</p>
-
-        <p><a href="http://bootstrapd.eventbrite.co.uk/">Click here to register.</a></p>
-
-        <h3>Speakers</h3>
-
-        <p>
-        Bootstrapd will be an <a href="http://en.wikipedia.org/wiki/Unconference">open-space event</a>. That means no keynote speakers, just sessions organised by bootstrappers, for bootstrappers.
-        </p>
-
-        <h3>On the Internet</h3>
-
-        <p>Check out our <a href="http://lanyrd.com/2012/bootstrapd/">Lanyrd</a> page and follow us on <a href="http://twitter.com/bootstrapd">Twitter</a>.</p>
-        <h3>Who's Behind All This?</h3>
-
-        <p>Bootstrapd is organised by <a href="http://twitter.com/mattwynne">@mattwynne</a> and <a href="http://twitter.com/tooky">@tooky</a>. Bootstrapd is a not for profit event, and any surplus revenue will go behind the bar in the evening.</p>
-
-        <aside class="definition">
-        <p>Boot·strapping: A self-sustaining process that proceeds without external help.</p>
-        </aside>
-        </section>
+      <div id='tickets'>
+        <h1>
+          Only 40 places available - And they're going fast
+        </h1>
+        <div id="ticket-button">
+          <a href="http://bootstrapd.eventbrite.co.uk/" id='price'>£75</a>
+          <a href="http://bootstrapd.eventbrite.co.uk/" id='cta'>Click here to buy your ticket</a>
+        </div>
+        <p>(bootstrapd is a not for profit event so any surplus revenue will go behind the bar in the evening.)</p>
       </div>
 
+      <div class='half'>
+        <article>
+          <h3>Speakers</h3>
+    
+          <p>
+          Bootstrapd is an <a href="http://en.wikipedia.org/wiki/Unconference">open-space event</a>. That means no keynote speakers, just sessions organised by bootstrappers, for bootstrappers.
+          </p>
+        </article>
+      </div>
+
+      <div class='half last'>
+        <article>
+          <h3>On the Internet</h3>
+    
+          <p>Check out our <a href="http://lanyrd.com/2012/bootstrapd/">Lanyrd</a> page and follow us on <a href="http://twitter.com/bootstrapd">Twitter</a>.</p>
+        </article>
+        <artcile>
+          <h3>Who's Behind All This?</h3>
+    
+          <p>Bootstrapd is organised by <a href="http://twitter.com/mattwynne">@mattwynne</a> and <a href="http://twitter.com/tooky">@tooky</a></p>
+        </artcile>
+      </div>
+      </section>
+
+    <div id='forkit'>
       <a href="http://github.com/mattwynne/bootstrapd"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
     </div>
-  </body>
+  </div>
+      <footer>
+        <div id="footer-wrapper" class='wrapper'>
+          <aside id="social">
+            <div>
+            <span class='st_twitter_large' displayText='Tweet'></span>
+            <span class='st_facebook_large' displayText='Facebook'></span>
+            <span class='st_googleplus_large' displayText='Google +1'></span>
+            <span class='st_linkedin_large' displayText='LinkedIn'></span>
+            <span class='st_email_large' displayText='Email'></span>
+            <span class='st_sharethis_large' displayText='ShareThis'></span>
+            </div>
+          </aside >
+          <aside class="definition">
+          <dl>
+            <dt>Boot·strapping:</dt><dd>A self-sustaining process that proceeds without external help.</dd>
+          </dl>
+          </aside>
+        </div>
+      </footer>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+</body>
 </html>

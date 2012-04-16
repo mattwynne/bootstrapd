@@ -16,7 +16,7 @@ body { background: #000 url(images/sunrise.jpg);
        background-size: 100% auto;
        background-repeat: no-repeat}
 
-#container {
+.container {
   margin-top: 3em;
   background-color: rgba(254,253,230, .75);
   border: 1px solid black;
