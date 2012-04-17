@@ -124,6 +124,11 @@
        @-moz-document url-prefix() {
          a#price, a#price:hover, a#price:visited { padding: 11px 20px;}
       }
+
+      /* Opera 10+ Targeting Hack */
+      @media not all and (-webkit-min-device-pixel-ratio:0) {
+         a#price, a#price:hover, a#price:visited { padding: 11px 20px;}
+      }
       @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
         #logo, #strapline, #dateline {text-align: center; width: 100%; -webkit-text-size-adjust:none;}
         #logo { font-size: 2.5em;}
