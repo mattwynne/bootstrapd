@@ -43,10 +43,10 @@ ol, ul { padding-left: 1.3em; }
 #header-wrapper { padding: 10px 0 0; color: white; }
 #header-wrapper a, #header-wrapper a:visited, #header-wrapper a:hover {color: white; !important}
 #logo { 
-  margin: 0 5% 20px 0;
+  margin: 0 2% 20px 0;
   font-size: 3em;
   font-family: 'Lemon', cursive;
-  width: 65%; sans-serif;
+  width: 67%; sans-serif;
   text-shadow: 1px 1px 0 rgba(0,0,0, 0.6), -1px -1px 0 rgba(255,255,255, 0.6);
   color: #fff;
   float: left;
@@ -137,7 +137,7 @@ p.price-description { float: left; margin-top: 1em; color: #d15f00; font-weight:
 
 
 
-.whos-behind-it img, .where-is-it img { float: left; border: 2px solid #fff; margin-right: 10px; }
+.whos-behind-it img, .where-is-it img { float: left; border: 2px solid #fff; margin: 0 10px 2em 0; }
 
 
 @-moz-document url-prefix() {
