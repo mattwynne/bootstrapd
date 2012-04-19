@@ -7,225 +7,119 @@
     <title>bootstrapd - a community gathering for software craftspeople</title>
     <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
     <script src="javascripts/modernizr.custom.13950.js" type="text/javascript" charset="utf-8"></script>
-    <style type="text/css">
-      body {
-        background: #606465 url(./background.jpg) no-repeat top;
-        background-size: 100%;
-        font-family: sans-serif;
-        font-weight: 100;
-      }
+     <link href='styles.css' rel='stylesheet' type='text/css'>
 
-      aside { font-size: 0.8em; }
-      #social {float: right}
-
-      h1, h2, h3, h4, h5, h6 {font-family: 'Lemon', cursive; color: #3f4953; text-shadow: 1px 1px 0 rgba(255,255,255, 0.6);}
-      p {font-family: sans-serif; font-weight: 100;}
-      dt {float: left; margin-right: 10px; font-family: 'Lemon', cursive;}
-
-      .wrapper { max-width: 850px; margin: 10px auto 0; }
-      .half { width: 48%; margin-right: 4%; float: left;}
-      .last {margin-right: 0;}
-
-      .clearfix:after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
-        }
-      * html .clearfix             { zoom: 1; } /* IE6 */
-      *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-      #header-wrapper { padding: 10px 0; color: white; }
-      #header-wrapper a, #header-wrapper a:visited, #header-wrapper a:hover {color: white; !important}
-      #logo { 
-        margin-right: 5%;
-        font-size: 3em;
-        font-family: 'Lemon', cursive;
-        width: 35%; sans-serif;
-        text-shadow: 1px 1px 0 rgba(0,0,0, 0.6), -1px -1px 0 rgba(255,255,255, 0.6);
-      }
-
-      #dateline { text-align: right; float: right; margin-top: 5px;}
-      #dateline time {font-weight: 700;}
-      #strapline { clear: both; margin-top: 2%; text-shadow: 1px 1px 0 rgba(0,0,0, 0.6); font-weight: 400; font-size: 1.35em;}
-
-      #body-wrapper {
-        background-color: rgba(255,255,255,0.5);
-        padding: 2%;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -o-border-radius:10px;
-        -ms-border-radius: 10px;
-        border-radius: 10px;
-        border: 1px solid #adbece;
-      }
-
-      #tickets {margin: 10px 0;}
-      #ticket-button {float: left; margin-right: 2%;}
-      a#price, a#price:visited {
-        float:left;
-        padding: 10px 20px;
-        border: 1px solid #d15f00;
-        border-left: none;
-        -o-border-top-left-radius: 10px;
-        -o-border-bottom-left-radius: 10px;
-        -ms-border-top-left-radius: 10px;
-        -ms-border-bottom-left-radius: 10px;
-        -webkit-border-top-left-radius: 10px;
-        -webkit-border-bottom-left-radius: 10px;
-        -moz-border-radius-top-left: 10px;
-        -moz-border-radius-bottom-left: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background: #d15f00;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        text-shadow: -1px -1px 0 rgba(0,0,0, 0.6);
-        font-size: 1.5em;
-      }
-
-      a#price:hover { background: #d15f00;}
-
-      a#cta , a#cta:visited {
-        float: left;
-        font-weight: 700;
-        padding: 15px 20px ;
-        border: 1px solid #d15f00;
-        -o-border-top-right-radius: 10px;
-        -o-border-bottom-right-radius: 10px;
-        -ms-border-top-right-radius: 10px;
-        -ms-border-bottom-right-radius: 10px;
-        -webkit-border-top-right-radius: 10px;
-        -webkit-border-bottom-right-radius: 10px;
-        -moz-border-radius-top-right: 10px;
-        -moz-border-radius-bottom-right: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        background: #ffa84c; /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTg0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdiMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* IE10+ */
-        background: linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-8 */
-        text-decoration: none;
-        color: white;
-        text-shadow: -1px -1px 0 rgba(0,0,0, 0.6);
-        }
-
-       a#cta:hover { background: #ff7b0d;}
-
-       @-moz-document url-prefix() {
-         a#price, a#price:hover, a#price:visited { padding: 11px 20px;}
-      }
-
-      /* Opera 10+ Targeting Hack */
-      @media not all and (-webkit-min-device-pixel-ratio:0) {
-         a#price, a#price:hover, a#price:visited { padding: 11px 20px;}
-      }
-      @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-        #logo, #strapline, #dateline {text-align: center; width: 100%; -webkit-text-size-adjust:none;}
-        #logo { font-size: 2.5em;}
-        .wrapper { width: 85%;} 
-        .half { float: none; width: 100%; margin-right: 0; }
-        #dateline { width: 100%; clear: both; margin-left: 0;}
-        #forkit { display: none;}
-        #ticket-button {float: none; margin-right: 0; font-size: 0.8em;}
-        a#cta , a#cta:visited {margin-right: 0; padding: 13px 12px 14px; -webkit-text-size-adjust:none;}
-        a#price , a#price:visited {margin-right: 0; padding: 10px 12px; -webkit-text-size-adjust:none; float: left !important;}
-        #social {clear: both; float: none;}
-    }
-
-    @media screen and (min-width: 601px){
-      .wrapper { width: 90% }
-      #forkit { display: none;}
-    }
-    </style>
   </head>
 
   <body>
-    <div id='header-wrapper' class='wrapper'>
+    <div id='header-wrapper' class='wrapper clearfix'>
       <header>
-        <div id='dateline'>
-          <time datetime="2012-06-27">Wednesday June 27th</time> <br /> <a href="http://lanyrd.com/venues/edinburgh/vrrz/">Abden House, Edinburgh, UK</a>
-    </div>
-        <div id='logo'>bootstrapd</div>
-        <div id='strapline'>
-          A community gathering for software craftspeople who build and sell their own products.
-        </div>
+      <hgroup>
+      <h1 id='logo'>bootstrapd
+        <span class="strapline">A gathering for web professionals with an independent spirit</span>
+      </h1>
+      <h2  id='dateline'>
+        <time datetime="2012-06-27">Wednesday June 27th</time> <br /> <a href="http://lanyrd.com/venues/edinburgh/vrrz/">Abden House, Edinburgh, UK</a>
+      </h2>
+      </hgroup>
       </header>
     </div>
     <div id="body-wrapper" class="wrapper clearfix">
       <section id="main-content">
-      <p>We don't want VC funding. We don't want a big payoff exit. We want to create a sustainable living and enjoy our craft.</p>
-      <p>Come along, meet like minded people, share ideas about how to make it happen.</p>
+      <h2 class="no-top-margin">Why bootstrapd?</h2>
+      <ul>
+        <li>You love making products for the web, and you're good at it.</li>
+        <li>You might be a UX designer, a programmer, a product owner, or all three.</li>
+        <li>You want to get your own startup off the ground, without outside funding.</li>
+      </ul>
+      <p>Whether you're already bootstrapping a startup or just aspire to, this event will give you practicel advice, support and inspiration to achieve your goals.</p>
 
       <div id='tickets'>
         <h1>
-          Only 40 places available - And they're going fast
+          Only 40 places available - Register today.
         </h1>
-        <div id="ticket-button">
+        <div id="ticket-button" class="clearfix">
           <a href="http://bootstrapd.eventbrite.co.uk/" id='price'>£75</a>
-          <a href="http://bootstrapd.eventbrite.co.uk/" id='cta'>Click here to buy your ticket</a>
+          <a href="http://bootstrapd.eventbrite.co.uk/" id='cta'>Buy your ticket today</a>
         </div>
-        <p>(bootstrapd is a not for profit event so any surplus revenue will go behind the bar in the evening.)</p>
+        <p class="price-description">Not for profit - surplus revenue will go behind the bar in the evening.</p>
       </div>
 
       <div class='half'>
         <article>
-          <h3>Speakers</h3>
-    
-          <p>
-          Bootstrapd is an <a href="http://en.wikipedia.org/wiki/Unconference">open-space event</a>. That means no keynote speakers, just sessions organised by bootstrappers, for bootstrappers.
-          </p>
+        <h3>Speakers</h3>
+        <p>
+        Bootstrapd is an <a href="http://en.wikipedia.org/wiki/Unconference">open-space event</a>. That means no keynote speakers, just sessions organised by bootstrappers, for bootstrappers.
+        </p>
         </article>
       </div>
 
-      <div class='half last'>
+      <div class='half'>
         <article>
-          <h3>On the Internet</h3>
-    
-          <p>Check out our <a href="http://lanyrd.com/2012/bootstrapd/">Lanyrd</a> page, follow us on <a href="http://twitter.com/bootstrapd">Twitter</a> or come and join the <a href="https://groups.google.com/forum/#!forum/bootstrapd">Google Group</a>.</p>
+        <h3>On the internet</h3>
+        <p>Check out our <a href="http://lanyrd.com/2012/bootstrapd/">Lanyrd</a> page, follow us on <a href="http://twitter.com/bootstrapd">Twitter</a> or come and join the <a href="https://groups.google.com/forum/#!forum/bootstrapd">Google Group</a>.</p>
         </article>
-        <artcile>
-          <h3>Who's Behind All This?</h3>
-    
-          <p>Bootstrapd is organised by <a href="http://twitter.com/mattwynne">@mattwynne</a> and <a href="http://twitter.com/tooky">@tooky</a></p>
-        </artcile>
+      </div>
+      <div class='half clear-left where-is-it'>
+        <article>
+        <h3>Where  is it?</h3>
+        <img src="images/abden-house.jpg" alt="Photo Abden House, Edinburgh" width="70" height="70" />
+        <p>Abden House, Pollock Halls Campus, Edinburgh, UK</p>
+        <p><a href="http://maps.google.com/maps?q=Abden%20House@55.9377733903,-3.1689322783">View on a map</a></p>
+        </article>
+      </div>
+      
+      <div class='half'>
+        <article class="whos-behind-it clearfix">
+        <h3>Who's behind all this?</h3>
+        <img src="http://farm2.static.flickr.com/1174/530582428_36f804b317_m.jpg" alt="Photo Matt Wynne" width="70" height="70" />
+        <img src="images/tookey.jpg" alt="Photo Steve Tooke" width="70" height="70" />
+        <p>Bootstrapd is organised by <a href="http://twitter.com/mattwynne">@mattwynne</a> and <a href="http://twitter.com/tooky">@tooky</a></p>
+        </article>
+        </div>
+        <div class='clear-left '>
+        <article>
+        <h3>I'm very busy you know! What makes bootstrapd special?</h3>
+        <p>
+        We're organising this conference simply because we're trying to bootstrap our own product businesses, and we'd like to spend a day with other people who are in the same boat. Bootstrapping can be lonely at times, and we believe that creating a support network where we can share ideas and lessons learned will give us all a massive boost.
+        </p>
+        <p>
+        Bootstrapping is all about taking initiative, so we're deliberately hosting this as an open space, where delegates decide the programme and propose and run sessions that are relevant to them. We'll facilitate the event to ensure it runs smoothly, but the content is up to all of us. Every open space we've been too has been a terrific experience.
+        </p>
+        <p>
+        We believe great spaces can inspire great thinking, so we've carefully chosen a beautiful venue in the centre of Edinburgh: a grand old baronial mansion with breathtaking, unrestricted views of Arthur's Seat from the private gardens. An intimate and truly inspiring place.</p>
+        <p>
+          Making a profit has nothing to do with our goal for this event. Any surplus revenue will go behind the bar.
+        </p>
+        </article>
       </div>
       </section>
 
-    <div id='forkit'>
-      <a href="http://github.com/mattwynne/bootstrapd"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+      <div id='forkit'>
+        <a href="http://github.com/mattwynne/bootstrapd"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+      </div>
     </div>
-  </div>
-      <footer>
-        <div id="footer-wrapper" class='wrapper'>
-          <aside id="social">
-            <div>
-            <span class='st_twitter_large' displayText='Tweet'></span>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-            <span class='st_googleplus_large' displayText='Google +1'></span>
-            <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            <span class='st_email_large' displayText='Email'></span>
-            <span class='st_sharethis_large' displayText='ShareThis'></span>
-            </div>
-          </aside >
-          <aside class="definition">
-          <dl>
-            <dt>Boot·strapping:</dt><dd>A self-sustaining process that proceeds without external help.</dd>
-          </dl>
-          </aside>
-        </div>
-      </footer>
+    <footer>
+    <div id="footer-wrapper" class='wrapper'>
+      <aside id="social">
+      <div>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_googleplus_large' displayText='Google +1'></span>
+        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+        <span class='st_email_large' displayText='Email'></span>
+        <span class='st_sharethis_large' displayText='ShareThis'></span>
+      </div>
+      </aside >
+      <aside class="definition">
+      <dl>
+        <dt>Boot·strapping:</dt><dd>A self-sustaining process that proceeds without external help.</dd>
+      </dl>
+      </aside>
+    </div>
+    </footer>
     <script type="text/javascript">var switchTo5x=true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
-</body>
+  </body>
 </html>
