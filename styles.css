@@ -8,6 +8,9 @@ body,
 #logo .strapline {
   font-family: sans-serif;
 }
+#logo a {
+  text-decoration: none;
+}
 
 
 aside { font-size: 0.8em; }
