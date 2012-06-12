@@ -164,8 +164,32 @@ p.price-description { float: left; margin-top: 1em; color: #d15f00; font-weight:
   a#cta , a#cta:visited {margin-right: 0; padding: 13px 12px 14px; -webkit-text-size-adjust:none;}
   a#price , a#price:visited {margin-right: 0; padding: 10px 12px; -webkit-text-size-adjust:none; float: left !important;}
   #social, p.price-description  {clear: both; float: none;}
+  dt, dd { float: none!important; width: 100%!important;}
+  dd { margin-bottom: 0.25em!important;}
 }
 
 @media screen and (min-width: 601px){
   .wrapper { width: 90% }
+}
+
+dl {
+  width: 100%;
+}
+dt, dd {
+  float: left;
+  margin-bottom: 0.5em;
+}
+dt {
+  clear: left;
+}
+dt {
+  width: 25%;
+  margin-right: 5%;
+}
+dd {
+  width: 65%;
+  margin: 0;
+}
+dd {
+  clear: right;
 }
